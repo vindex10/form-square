@@ -10,11 +10,12 @@ Run:
 
 ```
 cd examples/
-form -p ../form-square ee-mumu.frm
+form -p ../ ee-mumu.frm
 ```
 
 Now you can modify matrix element defined in the file. `-p` option is needed to
-provide search path to the library.
+provide search path to the library. It should point to the dir which has `form-square/` in it, so that
+library modules are referred from code: `form-square/vars.h`, to avoid interference with possible other includes.
 
 The package operates on predefined terms (in `vars.h`):
 

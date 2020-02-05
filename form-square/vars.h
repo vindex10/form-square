@@ -12,6 +12,9 @@ AutoDeclare Symbol S;
 * used for gamma matrices
 Function g;
 
+* used for masses of external particles m(p1)
+CFunction m;
+
 * external spinors. ubar(flineIdx, p1)
 Function u, ubar, v, vbar;
 Set particles: u, ubar, v, vbar;

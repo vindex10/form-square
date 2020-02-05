@@ -6,7 +6,7 @@
 
 
 * include required variables, see descriptions in the vars.h
-#include vars.h
+#include form-square/vars.h
 
 * define custom symbols (irrelevant to Tr(M^2) computation) used in M
 Symbol e;
@@ -23,13 +23,13 @@ Print;
 
 
 * load this to compute Tr(M^2). Result is saved to Msq
-#include matrix.frm
+#include form-square/matrix.frm
 * NOTE: .end command is not called inside. If you want to stop here, call it below:
 * .end;
 
 
 * postprocessing. just to simplify result according to Peskin.
-#include vars.h
+#include form-square/vars.h
 
 Symbol [photon prop];
 Symbol mMu;

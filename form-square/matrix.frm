@@ -1,6 +1,6 @@
-#include functions.h
+#include form-square/functions.h
 
-#include vars.h
+#include form-square/vars.h
 Global M1 = M;
 
 * complex conjugate (including spinors)
@@ -15,8 +15,7 @@ Print;
 .store;
 
 
-#include vars.h
-CFunction m;
+#include form-square/vars.h
 Global Msq = M1*M;
 #call ResolveSpinors();
 Print;
