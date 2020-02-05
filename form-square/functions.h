@@ -5,9 +5,17 @@
 *
     repeat;
         id u?particles(flineX?!{fline`i'}, p1?)*v?particles(fline`i', p2?) = v(fline`i', p2)*u(flineX, p1);
+
         id u?particles(flineX?!{fline`i'}, p1?)*g(fline`i', mu1?) = g(fline`i', mu1)*u(flineX, p1);
         id g(flineX?!{fline`i'}, mu1?)*u?particles(fline`i', p1?) = u(fline`i', p1)*g(flineX, mu1);
         id g(flineX?!{fline`i'}, mu1?)*g(fline`i', nu1?) = g(fline`i', nu1)*g(flineX, mu1);
+
+        id u?particles(flineX?!{fline`i'}, p1?)*g(fline`i', p2?) = g(fline`i', p2)*u(flineX, p1);
+        id g(flineX?!{fline`i'}, p2?)*u?particles(fline`i', p1?) = u(fline`i', p1)*g(flineX, p2);
+        id g(flineX?!{fline`i'}, p2?)*g(fline`i', p1?) = g(fline`i', p1)*g(flineX, p2);
+
+        id g(flineX?!{fline`i'}, p1?)*g(fline`i', mu1?) = g(fline`i', mu1)*g(flineX, p1);
+        id g(flineX?!{fline`i'}, mu1?)*g(fline`i', p1?) = g(fline`i', p1)*g(flineX, mu1);
     endrepeat;
 #endprocedure
 
