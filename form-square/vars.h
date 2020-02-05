@@ -12,6 +12,9 @@ AutoDeclare Symbol S;
 * used for gamma matrices
 Function g;
 
+* use for gamma5: g(fline1, gIdx5)
+Index gIdx5;
+
 * used for masses of external particles m(p1)
 CFunction m;
 

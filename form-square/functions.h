@@ -43,6 +43,7 @@
         #call SpinorLineToLeft(`i');
     #enddo;
     #call ReplaceSpinSums;
+    id g(fline1?, gIdx5) = g_(fline1, 5_);
     id g(fline1?, mu1?) = g_(fline1, mu1);
     id g(fline1?) = g_(fline1);
     #do i = 1,`LINES'
