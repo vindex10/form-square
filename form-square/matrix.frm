@@ -11,12 +11,16 @@ argument;
     id mu1?mu?nu = mu1;
 endargument;
 
-Print;
+#if `DEBUG'
+    Print;
+#endif
 .store;
 
 
 #include form-square/vars.h
 Global Msq = M1*M;
 #call ResolveSpinors();
-Print;
+#if `DEBUG'
+    Print;
+#endif
 .store

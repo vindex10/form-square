@@ -36,3 +36,8 @@ Index nu1, ..., nu`LORENTZIDXNUM';
 
 Set mu: mu1, ..., mu`LORENTZIDXNUM';
 Set nu: nu1, ..., nu`LORENTZIDXNUM';
+
+
+#if (`DEBUG' == 0)
+    Off statistics;
+#endif

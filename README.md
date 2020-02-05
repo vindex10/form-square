@@ -30,6 +30,8 @@ of the trace. See the issue here for details: https://github.com/vermaseren/form
 
 * notice, `qIDX` is reserved for propagators, but there is no any convenience yet.
 
+* use `DEBUG` preprocessor directive to turn on/off verbose mode.
+
 
 TODO:
 -----

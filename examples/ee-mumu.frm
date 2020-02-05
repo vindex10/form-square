@@ -4,6 +4,9 @@
 * define number of lorentz indices being used in M
 #define LORENTZIDXNUM "10"
 
+* turn on verbose mode
+#define DEBUG "1"
+
 
 * include required variables, see descriptions in the vars.h
 #include form-square/vars.h
