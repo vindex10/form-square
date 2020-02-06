@@ -1,24 +1,3 @@
-#procedure SpinorLineToLeft(i)
-*
-* Push spinors corresponding to line `i'
-* to the left
-*
-    repeat;
-        id u?particles(flineX?!{fline`i'}, p1?)*v?particles(fline`i', p2?) = v(fline`i', p2)*u(flineX, p1);
-
-        id u?particles(flineX?!{fline`i'}, p1?)*g(fline`i', mu1?) = g(fline`i', mu1)*u(flineX, p1);
-        id g(flineX?!{fline`i'}, mu1?)*u?particles(fline`i', p1?) = u(fline`i', p1)*g(flineX, mu1);
-        id g(flineX?!{fline`i'}, mu1?)*g(fline`i', nu1?) = g(fline`i', nu1)*g(flineX, mu1);
-
-        id u?particles(flineX?!{fline`i'}, p1?)*g(fline`i', p2?) = g(fline`i', p2)*u(flineX, p1);
-        id g(flineX?!{fline`i'}, p2?)*u?particles(fline`i', p1?) = u(fline`i', p1)*g(flineX, p2);
-        id g(flineX?!{fline`i'}, p2?)*g(fline`i', p1?) = g(fline`i', p1)*g(flineX, p2);
-
-        id g(flineX?!{fline`i'}, p1?)*g(fline`i', mu1?) = g(fline`i', mu1)*g(flineX, p1);
-        id g(flineX?!{fline`i'}, mu1?)*g(fline`i', p1?) = g(fline`i', p1)*g(flineX, mu1);
-    endrepeat;
-#endprocedure
-
 #procedure MelConjugate
 *
 * Conjugate dirac spinors and change i_ to -i_.
@@ -41,15 +20,13 @@
 
 #procedure ResolveSpinors
 *
-* Group spinors by lines they contribute to (respect non-commutativity)
 * Replace spin sums
 * Replace fake gamma matrices with g_
 * Do traces
 * Contract
 *
-    #do i = `LINES',1,-1
-        #call SpinorLineToLeft(`i');
-    #enddo;
+* NOTE: since we contract respecting spinor line indices, no need to reorder spinors
+*
     #call ReplaceSpinSums;
     id g(fline1?, gIdx5) = g_(fline1, 5_);
     id g(fline1?, mu1?) = g_(fline1, mu1);
