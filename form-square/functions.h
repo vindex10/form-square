@@ -1,9 +1,11 @@
-#procedure MelConjugate
+#procedure MelConjugate()
 *
 * Conjugate dirac spinors and change i_ to -i_.
 * NOTE: complex numbers assumed to be explicit. Conjugation does not propagate.
 *
+    id ubar?antipart[S1](i1?, p1?)*u?part[S2](i1?, p2?) = antipart[S2](i1, p2)*part[S1](i1, p1);
     id ubar?antipart[S1](i1?, p1?)*g(i1?, i2?)*u?part[S2](i1?, p2?) = antipart[S2](i1, p2)*g(i1, i2)*part[S1](i1, p1);
+    id ubar?antipart[S1](i1?, p1?)*g(i1?, i2?)*g(i1?, gIdx5)*u?part[S2](i1?, p2?) = antipart[S2](i1, p2)*g(i1, i2)*g(i1, gIdx5)*part[S1](i1, p1);
     id i_ = -i_;
 #endprocedure
 
@@ -18,7 +20,7 @@
 #endprocedure
 
 
-#procedure ResolveSpinors
+#procedure ResolveSpinors()
 *
 * Replace spin sums
 * Replace fake gamma matrices with g_
